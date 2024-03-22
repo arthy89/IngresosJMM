@@ -18,7 +18,7 @@ export const typeDefs = gql`
   # Int o Float para Number o Decimal128
   type Mutation {
     # clientes
-    createCliente(dni: Int!, nombre: String!): Cliente
+    createCliente(dni: String!, nombre: String!): Cliente
     deleteCliente(_id: ID!): Cliente
     updateCliente(_id: ID!, dni: Int, nombre: String!): Cliente
     # recibos
@@ -50,7 +50,7 @@ export const typeDefs = gql`
   # Definimos el tipo de dato Cliente u otros
   type Cliente {
     _id: ID
-    dni: Int
+    dni: String
     nombre: String
     createdAt: String
     updatedAt: String

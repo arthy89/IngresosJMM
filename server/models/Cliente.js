@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const ClienteSchema = new mongoose.Schema(
   {
     dni: {
-      type: Number,
+      type: String,
       unique: true,
       required: true,
     },
